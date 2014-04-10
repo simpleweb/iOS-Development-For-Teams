@@ -1,6 +1,6 @@
 # iOS Development For Teams
 
-Follow There instructions to get your computer set up for iOS development. View the blog post [here](http://simpleweb.co.uk/2014/setting-up-your-team-for-ios-app-development).
+Follow these instructions to get your computer set up for iOS development. View the blog post [here](http://simpleweb.co.uk/2014/setting-up-your-team-for-ios-app-development).
 
 ## How to use this repository
 
