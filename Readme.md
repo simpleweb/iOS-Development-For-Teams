@@ -4,13 +4,13 @@ Follow these instructions to get your computer set up for iOS development. View 
 
 ## How to use this repository
 
-- Fork this document
+- [Fork this repo](https://github.com/simpleweb/iOS-Development-For-Teams/fork)
 - Decide on a shared password for your `p12` files.
-- Generate your shared files (see instruction in example files)
-  - `/certificates/apn/_template/CertificateSigningRequest.certSigningRequest`
-  - `/certificates/production/company_name/CertificateSigningRequest.certSigningRequest`
-  - `/certificates/production/company_name/ios_distribution.cer`
-  - `/certificates/production/company_name/Certificates.p12`
+- Generate your shared files (see how in each of these files)
+  - `/certificates/apn/_template/CertificateSigningRequest.certSigningRequest` [here](https://github.com/simpleweb/iOS-Development-For-Teams/blob/master/certificates/apn/_template/CertificateSigningRequest.certSigningRequest)
+  - `/certificates/production/company_name/CertificateSigningRequest.certSigningRequest` [here](https://github.com/simpleweb/iOS-Development-For-Teams/blob/master/certificates/production/company_name/CertificateSigningRequest.certSigningRequest)
+  - `/certificates/production/company_name/ios_distribution.cer` [here](https://github.com/simpleweb/iOS-Development-For-Teams/blob/master/certificates/production/company_name/ios_distribution.cer)
+  - `/certificates/production/company_name/Certificates.p12` [here](https://github.com/simpleweb/iOS-Development-For-Teams/blob/master/certificates/production/company_name/Certificates.p12)
 - Create a `Development` provisioning profile and Wildcard App ID
 - Change the `company_name` paths to your company name as well as in this document.
 - Your team can follow the instructions below
@@ -39,8 +39,8 @@ There are seven types of certificates used in iOS Development and Deployment.
   - Apple Push Notification service SSL (Production)
   - Pass Type ID Certificate
   - Website Push ID Certificate
-  
- 
+
+
 ### Intermediate Certificate
 
 To use your certificates, you must have the intermediate signing certificate in your system keychain. This is automatically installed by Xcode. However, if you need to reinstall the intermediate signing certificate open the file `certificates/AppleWWDRCA.cer` in keychain access.
@@ -75,11 +75,11 @@ To use your certificates, you must have the intermediate signing certificate in 
 - Open the file, this should launch Keychain Access. You can verify that your certificate has installed if you see the certificate
 
     iPhone Developer: {your_name} ({uuid})
-    
+
 - Select this certificate then go to `File > Export Items` and save this file as `certificates/development/{firstname}_{surname}/Certificates.p12`
 
   - Give this file your password
-  
+
 - Commit this change and push to origin
 
 #### Restore a iOS App Development Certificate
@@ -89,7 +89,7 @@ To use your certificates, you must have the intermediate signing certificate in 
 - Open the file, this should launch Keychain Access and will ask you for your password. You can verify that your certificate has installed if you see the certificate
 
     iPhone Developer: {your_name} ({uuid})
-    
+
 
 ### Apple Push Notification service SSL (Sandbox)
 
@@ -110,11 +110,11 @@ To use your certificates, you must have the intermediate signing certificate in 
 - Open the file, this should launch Keychain Access. You can verify that your certificate has installed if you see the certificate
 
     Apple Development IOS Push Services {bundle_id}
-    
+
 - Select this certificate then go to `File > Export Items` and save this file as `certificates/apn/{bundle_id}/Certificates.p12`
 
   - Give this file your password
-  
+
 - Commit this change and push to origin
 
 ### App Store and Ad Hoc
@@ -129,7 +129,7 @@ This certificate is like the iOS App Development but is shared among the team.
 - Open the file, this should launch Keychain Access and will ask you for your password. You can verify that your certificate has installed if you see the certificate
 
     iPhone Distribution: {your_name} ({uuid})
-    
+
 #### Pass Type ID Certificate
 
 > *Yet to be documented*
@@ -156,7 +156,7 @@ Identifiers **do not** download to your computer and are only used in reference 
 - Give the App Bundle ID a reverse-domain name such as `com.contactzilla.mobileimporter`
 
   > Note: Bundle ID's should not have hyphens since this breaks compatibility with Android
-      
+
 - Check any relevant services you require and click continue
 
 - Confirm the information on the next page and finally click submit to create.
@@ -171,11 +171,11 @@ The device list needs to remain structured to have confidence that we are target
 Please name devices in the following format -
 
   [Full name / Company Name] - [Device + Generation] - #[id]
-  
+
 For example
 
   Adam Butler - iPad Mini Retina 1st Gen - #1
-  
+
 ...or...
 
   Simpleweb - iPad Retina 3rd gen - #1
@@ -194,12 +194,12 @@ Unlike certificates provisioning profiles to not need backing up and can be down
 
 - Click Edit
 
-- **If your certificate is checked and your target device is check then press cancel otherwise select All certificates and All devices.** 
+- **If your certificate is checked and your target device is check then press cancel otherwise select All certificates and All devices.**
 
   > The reason for selecting all certificates and devices is that it will reduce the frequency of this certificate being regenerated. This also means all computers with a certificate are ready to develop on any app.
-  
+
 - Finally download the Profile and open the file, this will either open in Keychain Access or iPhone Configuration Utility depending on what version of OSX you use. If opened in iPhone Configuration Utility you will prompted to confirm you wish to add this profile to your library.
-  
+
 #### Create a provisioning profile for App Store
 
 
@@ -212,9 +212,9 @@ Unlike certificates provisioning profiles to not need backing up and can be down
 - Select your App ID
 
   > Note: Never set the App ID to Development
-  
+
 - In certificates select [Company Name] (iOS Distribution)
 
   > Note: This should be done regardless of who you are publishing on behalf of
-  
+
 > *Can not document complete process due to Dev Center bug*
