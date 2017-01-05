@@ -5,16 +5,7 @@ Follow these instructions to get your computer set up for iOS development. View 
 ## How to use this repository
 
 - [Fork this repo](https://github.com/simpleweb/iOS-Development-For-Teams/fork)
-- Decide on a shared password for your `p12` files.
-- Generate your shared files (see how in each of these files)
-  - `/certificates/apn/_template/CertificateSigningRequest.certSigningRequest` [here](https://github.com/simpleweb/iOS-Development-For-Teams/blob/master/certificates/apn/_template/CertificateSigningRequest.certSigningRequest)
-  - `/certificates/production/company_name/CertificateSigningRequest.certSigningRequest` [here](https://github.com/simpleweb/iOS-Development-For-Teams/blob/master/certificates/production/company_name/CertificateSigningRequest.certSigningRequest)
-  - `/certificates/production/company_name/ios_distribution.cer` [here](https://github.com/simpleweb/iOS-Development-For-Teams/blob/master/certificates/production/company_name/ios_distribution.cer)
-  - `/certificates/production/company_name/Certificates.p12` [here](https://github.com/simpleweb/iOS-Development-For-Teams/blob/master/certificates/production/company_name/Certificates.p12)
-- Create a `Development` provisioning profile and Wildcard App ID
-- Change the `company_name` paths to your company name as well as in this document.
 - Your team can follow the instructions below
-
 
 ## Important
 
