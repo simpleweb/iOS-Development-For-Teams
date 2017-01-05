@@ -21,6 +21,10 @@ Follow these instructions to get your computer set up for iOS development. View 
 
 - Certificates should be backed up as `p12` files since the `cer` file does not have all of the information required to transfer between terminals.
 
+- **Turn off XCode's automatically manage signing option *before* selecting a team** otherwise you will be constantly invalidating each others distribution certificates.
+
+  ![Turn this off always](http://i.imgur.com/WJfJ8Z3.png)
+
 - The owner of the Apple Developer account should be readily available or should be under a shared Apple ID. Regular changes to the **Apple Developers Program Licence Agreement** can be blocking and can only be signed by the account owner.
 
 
