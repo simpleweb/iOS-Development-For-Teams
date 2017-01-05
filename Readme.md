@@ -63,25 +63,7 @@ The certificate comes from Apple and the Key belongs on the computer that genera
 
 This is called the bundle id within XCode and is a reverse domain identifier which is unique per application. For example `uk.co.simpleweb.myapp`
 
-A shared App ID should be used in development unless you are using one of the following:
-
-  - App Groups
-  - Apple Pay
-  - Associated Domains
-  - Complete Protection
-  - Protected Unless Open
-  - Protected Until First User Authentication
-  - Game Center
-  - HealthKit
-  - HomeKit
-  - Compatible with Xcode 5
-  - Include CloudKit support
-  - (requires Xcode 6 and explicit App ID)
-  - In-App Purchase
-  - Network Extensions
-  - Personal VPN
-  - Push Notifications
-  - Wireless Accessory Configuration
+A shared App ID should be used in development unless you are using services that are app specific like Push. A full list of these can be found in [the App ID guide](/guide/app_id/readme.md)
 
 An App ID is however required before submitting to iTunes Connect.
 
