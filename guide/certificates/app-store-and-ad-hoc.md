@@ -25,7 +25,7 @@ Creating a new certificate will invalidate the previous one and should only be d
 
 - Click the plus icon to add a new iOS Certificate
 
-- Select **iOS App Development** and continue through to the CSR upload screen
+- Select **App Store and Ad Hoc** and continue through to the CSR upload screen
 
 - Upload your `CertificateSigningRequest.certSigningRequest` file then click generate
 
