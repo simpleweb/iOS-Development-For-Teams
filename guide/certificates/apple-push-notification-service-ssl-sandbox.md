@@ -25,11 +25,11 @@ Creating a new certificate will invalidate the previous one and should only be d
 
 - Click the plus icon to add a new iOS Certificate
 
-- Select **iOS App Development** and continue through to the CSR upload screen
+- Select **Apple Push Notification service SSL (Sandbox)** and continue through to the CSR upload screen
 
 - Upload your `CertificateSigningRequest.certSigningRequest` file then click generate
 
-- Click download and save the file as `certificates/apn/{app_bundle_id}/sandbox/ios_distribution.cer`
+- Click download and save the file as `certificates/apn/{app_bundle_id}/sandbox/aps_sandbox.cer`
 
 - Open the file, this should launch Keychain Access. You can verify that your certificate has installed if you see the certificate
 
@@ -40,6 +40,12 @@ Creating a new certificate will invalidate the previous one and should only be d
 - Select this certificate then go to `File > Export Items` and save this file as `certificates/apn/{app_bundle_id}/sandbox/Certificates.p12`
 
 - Give this file a shared password (or leave blank if the repository is private)
+
+## Convert your shared certificate to PEM format
+
+- This uses the `openssl` library to generate a passwordless file that contains the signed certificate and its private key:
+
+    openssl pkcs12 -in Certificates.p12 -out apn_sandbox.pem -nodes
 
 ## Restore your shared certificate
 

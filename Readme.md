@@ -115,7 +115,7 @@ This certificate is used by your backend server to authenticate the sending of p
 
 #### App Store and Ad Hoc
 
-This certificate is used by your machine to sign applications for distribution. This certificate is required if you are publishing to the App store, distributing an IPA file or testing the app with internal or external testers in TestFlight.    
+This certificate is used by your machine to sign applications for distribution. This certificate is required if you are publishing to the App store, distributing an IPA file or testing the app with internal or external testers in TestFlight.
 
 > WARNING: Applications distributed as Ad Hoc / TestFlight / HockeyApp will expire.
 
@@ -128,7 +128,18 @@ This certificate is used by your machine to sign applications for distribution. 
 
 #### Apple Push Notification service SSL (Sandbox)
 
-This certificate is used by your backend server to authenticate the sending of push notifications using Apple Push Notification Service.
+This certificate is used by your backend DEVELOPMENT server to authenticate the sending of push notifications using Apple Push Notification Service.
+
+- **Type**: Push
+- **Environment**: App Store
+- **Personal**: No
+- **Shared with team**: Yes
+- **App specific**: Yes
+- **Creation, Backup & Restore guide**: [Link](/guide/certificates/apple-push-notification-service-ssl-sandbox.md)
+
+#### Apple Push Notification service SSL (Sandbox & Production)
+
+This certificate is used by your backend PRODUCTION server to authenticate the sending of push notifications using Apple Push Notification Service.
 
 - **Type**: Push
 - **Environment**: App Store

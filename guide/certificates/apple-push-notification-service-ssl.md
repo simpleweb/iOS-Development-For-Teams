@@ -1,4 +1,4 @@
-# Setup Apple Push Notification Service SSL
+# Setup Apple Push Notification Service SSL (Sandbox & Production)
 
 ## Important
 
@@ -12,7 +12,7 @@ Creating a new certificate will invalidate the previous one and should only be d
 
 - Within the Keychain Access drop down menu, select Keychain Access > Certificate Assistant > Request a Certificate from a Certificate Authority.
 
-- In the Certificate Information window, en§ter the following information:
+- In the Certificate Information window, enter the following information:
   - In the User Email Address field, enter the **shared email address** (e.g. info@mycompany.com).
   - In the Common Name field, create a name for your shared key (e.g. **Simpleweb LTD**).
   - The CA Email Address field should be left empty.
@@ -29,7 +29,7 @@ Creating a new certificate will invalidate the previous one and should only be d
 
 - Upload your `CertificateSigningRequest.certSigningRequest` file then click generate
 
-- Click download and save the file as `certificates/apn/{app_bundle_id}/production/ios_distribution.cer`
+- Click download and save the file as `certificates/apn/{app_bundle_id}/production/aps_production.cer`
 
 - Open the file, this should launch Keychain Access. You can verify that your certificate has installed if you see the certificate
 
@@ -40,6 +40,12 @@ Creating a new certificate will invalidate the previous one and should only be d
 - Select this certificate then go to `File > Export Items` and save this file as `certificates/apn/{app_bundle_id}/production/Certificates.p12`
 
 - Give this file a shared password (or leave blank if the repository is private)
+
+## Convert your shared certificate to PEM format
+
+- This uses the `openssl` library to generate a passwordless file that contains the signed certificate and its private key:
+
+    openssl pkcs12 -in Certificates.p12 -out apn_production.pem -nodes
 
 ## Restore your shared certificate
 
